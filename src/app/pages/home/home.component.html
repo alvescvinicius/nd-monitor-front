@@ -1,0 +1,18 @@
+<div class="container py-5">
+  <div class="text-center">
+    <h1 class="text-primary">Bem-vindo à Home!</h1>
+    <p class="lead">Este projeto está usando Angular 18.2.19 com Bootstrap 5.</p>
+    <button class="btn btn-success mt-3">Botão de Exemplo</button>
+  </div>
+</div>
+
+<div class="container mt-4">
+  <h2>Upload de Arquivo Excel</h2>
+  <input type="file" (change)="onFileChange($event)" accept=".xlsx, .xls" class="form-control mt-3" />
+
+  <div class="mt-4" *ngIf="jsonData.length > 0">
+    <h4>Conteúdo JSON:</h4>
+    <pre> {{ jsonData | json }} </pre>
+  </div>
+
+</div>
